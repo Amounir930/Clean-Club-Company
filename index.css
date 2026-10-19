@@ -248,15 +248,16 @@ button {
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 16px;
 }
 
 .nav-link {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 13.5px;
+  font-weight: 700;
   color: var(--color-text-secondary);
   position: relative;
   padding-block: 6px;
+  white-space: nowrap;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -282,7 +283,37 @@ button {
 .header-action-group {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+}
+
+.btn-lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-bg-base);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-lang-toggle:hover {
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+}
+
+.btn-lang-toggle svg {
+  stroke: var(--color-cyan);
+  transition: stroke 0.2s ease;
+}
+
+.btn-lang-toggle:hover svg {
+  stroke: #ffffff;
 }
 
 .btn {
@@ -838,6 +869,45 @@ body[dir="ltr"] .partners-track {
   font-size: 12px;
   color: var(--color-text-muted);
   line-height: 1.5;
+}
+
+/* Mission & Vision Styling from Company Profile */
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-block: 20px 24px;
+}
+
+.mv-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  transition: var(--transition);
+}
+
+.mv-card:hover {
+  border-color: var(--color-cyan);
+  transform: translateY(-2px);
+}
+
+.mv-badge {
+  display: inline-block;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 8px;
+}
+
+.mv-desc {
+  font-size: 12.5px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
 }
 
 /* 4-Step Booking Process */
@@ -1484,6 +1554,75 @@ body[dir="ltr"] .footer-link-item a:hover {
   .float-action-btn svg {
     width: 22px;
     height: 22px;
+  }
+
+  /* Mobile Paragraph Typography & Readability (اعادة تنسيق النصوص والفقرات) */
+  p, .section-desc, .hero-desc, .service-desc, .campaign-poster-desc, .process-desc, .about-text-lead, .pillar-desc, .faq-body {
+    text-wrap: pretty;
+    line-height: 1.85;
+  }
+
+  .section-desc {
+    font-size: 13.5px;
+    padding-inline: 12px;
+    margin-bottom: 24px;
+    color: #475569;
+    text-align: center;
+  }
+
+  .about-text-lead {
+    font-size: 14px;
+    line-height: 1.85;
+    margin-bottom: 20px;
+    color: #334155;
+  }
+
+  .pillar-desc {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #64748b;
+  }
+
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .mv-card {
+    padding: 14px;
+  }
+
+  .mv-desc {
+    font-size: 12.5px;
+    line-height: 1.75;
+  }
+
+  /* FAQ Accordion Mobile Layout (Clean, Rounded, Spacious) */
+  .faq-card {
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 4px rgba(15, 23, 42, 0.04);
+    margin-bottom: 12px;
+  }
+
+  .faq-header {
+    padding: 14px 16px;
+    font-size: 14px;
+    line-height: 1.55;
+    gap: 12px;
+  }
+
+  .faq-body {
+    padding-inline: 16px;
+    padding-bottom: 16px;
+    font-size: 13.5px;
+    line-height: 1.85;
+    color: #475569;
+    text-align: right;
+  }
+
+  html[lang="en"] .faq-body {
+    text-align: left;
   }
 }
 
