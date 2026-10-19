@@ -1,0 +1,19 @@
+/* TEAM */
+Developer: Adel Mounir
+Email: adel.mounir@60sec.shop
+Phone: +201096888859
+WhatsApp: https://wa.me/201096888859
+Location: Egypt / Global
+
+/* CLIENT & BUSINESS */
+Company: Clean Club Hospitality & Cleaning Services (شركة كلوب كلين للتنظيفات والضيافة والخدمات)
+Phone: +974 3349 8554
+Location: Doha, State of Qatar
+Language: Arabic / English
+
+/* SITE SPECIFICATIONS */
+Standards: HTML5, CSS3, ES6+ JavaScript, Schema.org JSON-LD
+Typography: Cairo, Outfit
+Components: Vanilla Architecture, Interactive Pricing Calculator, Mobile Drawer, WhatsApp Automation
+Live URL: https://amounir930.github.io/Clean-Club-Company/
+Repository: https://github.com/Amounir930/Clean-Club-Company

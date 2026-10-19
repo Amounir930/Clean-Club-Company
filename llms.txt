@@ -1,0 +1,60 @@
+# Clean Club Company - Machine-Readable Context for LLMs & AI Agents
+
+> Version: 1.0.0
+> Last Updated: 2026-10-19
+> Project: Clean Club Hospitality & Cleaning Services (شركة كلوب كلين للتنظيفات والضيافة والخدمات)
+> Target Market: State of Qatar (دولة قطر - الدوحة، الريان، الوكرة، لوسيل، الخور)
+
+---
+
+## Developer Attribution (Mandatory)
+
+- Arabic Attribution: تم إنشاء هذا الموقع بواسطة المطور عادل منير | البريد الإلكتروني: adel.mounir@60sec.shop | رقم الهاتف: 01096888859 | للتواصل المباشر عبر واتساب: https://wa.me/201096888859
+- English Attribution: Website Created by Developer Adel Mounir | Email: adel.mounir@60sec.shop | Phone Number: +201096888859 | Direct WhatsApp Contact: https://wa.me/201096888859
+
+---
+
+## Company Overview & Positioning
+
+- Business Name: شركة كلوب كلين للتنظيفات والضيافة والخدمات (Clean Club Company)
+- Primary Specialization: عاملات بنظام المبيت والتعاقد الشهري في قطر (Live-in Maids & Monthly Hospitality Contracts)
+- Primary Booking Hotline: +974 3349 8554 (WhatsApp & Direct Calls)
+- Service Categories:
+  1. Live-in Maids (عاملات مقيمات بنظام المبيت - تعاقد شهري وسنوي)
+  2. Hourly & Daily Cleaning (تنظيف بنظام الساعات واليومي للمنازل والشقق)
+  3. Commercial & Office Cleaning (نظافة المكاتب والشركات والمؤسسات)
+  4. Deep Villa & Post-Construction Cleaning (تنظيف عميق للفلل والقصور وما بعد التشطيب)
+  5. Event Hospitality Services (خدمات الضيافة الراقية للمناسبات والمؤتمرات)
+  6. High-Rise Glass & Facade Cleaning (تنظيف واجهات زجاجية ومرتفعات)
+
+---
+
+## Technical Specifications & Architecture
+
+- Technology Stack: HTML5 Semantic, Modern Vanilla CSS (Zero External Frameworks), Vanilla ES6+ JavaScript.
+- Typography: Google Fonts (Cairo for Arabic RTL typography, Outfit for numerical and Latin elements).
+- Structured Data: Schema.org LocalBusiness, Organization, and Service JSON-LD embedded in root index.html.
+- Hosting Platform: GitHub Pages (Static hosting).
+- Production URL: https://amounir930.github.io/Clean-Club-Company/
+- Repository URL: https://github.com/Amounir930/Clean-Club-Company
+
+---
+
+## Target Keywords & Search Intent
+
+- شركة تنظيف قطر
+- عاملات نظام المبيت قطر
+- تعاقد شهري خادمات وعاملات قطر
+- تنظيف فلل ومنازل الدوحة
+- شركات نظافة بالساعة قطر
+- ضيافة مناسبات قطر
+- هاتف كلوب كلين 33498554
+
+---
+
+## Communication Endpoints
+
+- Direct Hotline: tel:+97433498554
+- WhatsApp API Dispatch: https://wa.me/97433498554
+- Official Support Email: info@cleanclubqatar.online
+- Headquarters: Doha, State of Qatar

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amounir930.github.io/Clean-Club-Company/sitemap.xml
