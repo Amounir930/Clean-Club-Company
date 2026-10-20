@@ -739,7 +739,7 @@ body[dir="ltr"] .partners-track {
   color: var(--color-primary);
   line-height: 1.4;
   margin-bottom: 8px;
-  text-align: start;
+  text-align: center;
 }
 
 .service-desc {
@@ -748,18 +748,18 @@ body[dir="ltr"] .partners-track {
   line-height: 1.75;
   margin-bottom: 18px;
   flex: 1;
-  text-align: start;
+  text-align: center;
 }
 
 .service-features-list {
   list-style: none;
+  padding: 14px 0 0 0;
+  margin: 0 0 18px 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-bottom: 18px;
-  padding-top: 14px;
   border-top: 1px dashed var(--color-border);
-  text-align: start;
+  width: 100%;
 }
 
 .service-feature-item {
@@ -769,7 +769,7 @@ body[dir="ltr"] .partners-track {
   font-size: 13px;
   color: var(--color-text-secondary);
   line-height: 1.5;
-  text-align: start;
+  width: 100%;
 }
 
 .service-feature-item svg {
@@ -777,6 +777,10 @@ body[dir="ltr"] .partners-track {
   height: 15px;
   color: var(--color-cyan);
   flex-shrink: 0;
+}
+
+.service-feature-item span {
+  flex: 1;
 }
 
 .service-card-action {
@@ -1676,30 +1680,30 @@ html[dir="ltr"] .staff-action-link svg {
   }
   .service-body {
     padding: 16px 16px 18px;
-    text-align: start;
+    text-align: center;
   }
   .service-title {
     font-size: 16.5px;
     line-height: 1.35;
     margin-bottom: 8px;
-    text-align: start;
+    text-align: center;
   }
   .service-desc {
     font-size: 13px;
     line-height: 1.7;
     margin-bottom: 14px;
-    text-align: start;
+    text-align: center;
   }
   .service-features-list {
     margin-bottom: 14px;
-    padding-top: 12px;
+    padding: 12px 0 0 0;
     gap: 7px;
-    text-align: start;
+    width: 100%;
   }
   .service-feature-item {
     font-size: 12px;
     line-height: 1.45;
-    text-align: start;
+    width: 100%;
   }
   .service-card-action {
     padding-top: 12px;
@@ -2520,6 +2524,66 @@ body[dir="ltr"] .slider-arrow-next {
 /* ==========================================================================
    Bilingual Symmetry: Strict Text Alignments & Layout Consistency
    ========================================================================== */
+
+/* Card titles and descriptive paragraphs centered in both languages */
+.service-title,
+.service-desc,
+.campaign-poster-title,
+.campaign-poster-desc,
+.process-title,
+.process-desc {
+  text-align: center !important;
+}
+
+/* Bullet points (النقط) anchored to the right in Arabic */
+html[dir="rtl"] .service-features-list,
+body[dir="rtl"] .service-features-list {
+  padding: 14px 0 0 0;
+  margin: 0 0 18px 0;
+  width: 100%;
+}
+
+html[dir="rtl"] .service-feature-item,
+body[dir="rtl"] .service-feature-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: right;
+  direction: rtl;
+  width: 100%;
+  gap: 9px;
+}
+
+html[dir="rtl"] .service-feature-item span,
+body[dir="rtl"] .service-feature-item span {
+  text-align: right;
+}
+
+/* Bullet points (النقط) anchored to the left in English */
+html[dir="ltr"] .service-features-list,
+body[dir="ltr"] .service-features-list {
+  padding: 14px 0 0 0;
+  margin: 0 0 18px 0;
+  width: 100%;
+}
+
+html[dir="ltr"] .service-feature-item,
+body[dir="ltr"] .service-feature-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  direction: ltr;
+  width: 100%;
+  gap: 9px;
+}
+
+html[dir="ltr"] .service-feature-item span,
+body[dir="ltr"] .service-feature-item span {
+  text-align: left;
+}
+
+/* Additional section alignments */
 html[dir="rtl"] .pillar-item,
 html[dir="rtl"] .pillar-item > div,
 html[dir="rtl"] .pillar-title,
@@ -2530,14 +2594,6 @@ html[dir="rtl"] .staff-body,
 html[dir="rtl"] .staff-name,
 html[dir="rtl"] .staff-role,
 html[dir="rtl"] .staff-specs,
-html[dir="rtl"] .service-body,
-html[dir="rtl"] .service-title,
-html[dir="rtl"] .service-desc,
-html[dir="rtl"] .service-features-list,
-html[dir="rtl"] .service-feature-item,
-html[dir="rtl"] .campaign-poster-title,
-html[dir="rtl"] .campaign-poster-desc,
-html[dir="rtl"] .process-desc,
 html[dir="rtl"] .faq-header,
 html[dir="rtl"] .faq-body,
 html[dir="rtl"] .about-text-lead {
@@ -2554,14 +2610,6 @@ html[dir="ltr"] .staff-body,
 html[dir="ltr"] .staff-name,
 html[dir="ltr"] .staff-role,
 html[dir="ltr"] .staff-specs,
-html[dir="ltr"] .service-body,
-html[dir="ltr"] .service-title,
-html[dir="ltr"] .service-desc,
-html[dir="ltr"] .service-features-list,
-html[dir="ltr"] .service-feature-item,
-html[dir="ltr"] .campaign-poster-title,
-html[dir="ltr"] .campaign-poster-desc,
-html[dir="ltr"] .process-desc,
 html[dir="ltr"] .faq-header,
 html[dir="ltr"] .faq-body,
 html[dir="ltr"] .about-text-lead {
