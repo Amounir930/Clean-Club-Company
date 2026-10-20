@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLanguageToggle();
   initMobileMenu();
   initLiveinSlider();
+  initStaffSlider();
   initFaqAccordion();
   initSmoothScroll();
   initStickyHeader();
@@ -550,6 +551,19 @@ function initLanguageToggle() {
 
   let currentLang = localStorage.getItem('cleanclub_lang') || 'ar';
 
+  function updateButtonLabels(lang) {
+    const isMobile = window.innerWidth <= 640;
+    const desktopNextText = (lang === 'ar') ? 'English' : 'العربية';
+    const mobileNextText = (lang === 'ar') ? 'EN' : 'عربي';
+
+    if (langLabel) {
+      langLabel.textContent = isMobile ? mobileNextText : desktopNextText;
+    }
+    if (drawerLangLabel) {
+      drawerLangLabel.textContent = desktopNextText;
+    }
+  }
+
   function applyLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('cleanclub_lang', lang);
@@ -562,9 +576,7 @@ function initLanguageToggle() {
     }
 
     // Update toggle button text
-    const nextLangText = (lang === 'ar') ? 'English' : 'العربية';
-    if (langLabel) langLabel.textContent = nextLangText;
-    if (drawerLangLabel) drawerLangLabel.textContent = nextLangText;
+    updateButtonLabels(lang);
 
     // Update all elements with data-i18n
     const transObj = translations[lang];
@@ -588,6 +600,9 @@ function initLanguageToggle() {
     if (window.refreshLiveinSlider) {
       window.refreshLiveinSlider();
     }
+    if (window.refreshStaffSlider) {
+      window.refreshStaffSlider();
+    }
   }
 
   function toggleLanguage() {
@@ -600,10 +615,21 @@ function initLanguageToggle() {
   }
 
   if (drawerLangToggleBtn) {
-    drawerLangToggleBtn.addEventListener('click', toggleLanguage);
+    drawerLangToggleBtn.addEventListener('click', () => {
+      toggleLanguage();
+      const drawer = document.getElementById('mobileDrawer');
+      if (drawer) {
+        drawer.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
   }
 
-  // Initial apply
+  window.addEventListener('resize', () => {
+    updateButtonLabels(currentLang);
+  });
+
+  // Apply default or stored language
   applyLanguage(currentLang);
 }
 
@@ -719,32 +745,25 @@ function initStickyHeader() {
 }
 
 /**
- * Interactive Live-In & Monthly Contracts Carousel / Slider
+ * Generic Interactive Carousel / Slider Controller
  */
-function initLiveinSlider() {
-  const slider = document.getElementById('liveinSlider');
-  const track = document.getElementById('liveinSliderTrack');
-  const prevBtn = document.getElementById('liveinSliderPrev');
-  const nextBtn = document.getElementById('liveinSliderNext');
-  const dotsContainer = document.getElementById('liveinSliderDots');
+function createCarouselController(config) {
+  const slider = document.getElementById(config.sliderId);
+  const track = document.getElementById(config.trackId);
+  const prevBtn = document.getElementById(config.prevBtnId);
+  const nextBtn = document.getElementById(config.nextBtnId);
+  const dotsContainer = document.getElementById(config.dotsContainerId);
 
-  if (!slider || !track || !prevBtn || !nextBtn || !dotsContainer) return;
+  if (!slider || !track || !prevBtn || !nextBtn || !dotsContainer) return null;
 
-  const cards = Array.from(track.querySelectorAll('.campaign-poster-card'));
-  if (cards.length === 0) return;
+  const cards = Array.from(track.querySelectorAll(config.cardSelector));
+  if (cards.length === 0) return null;
 
   let currentIndex = 0;
   let autoPlayTimer = null;
 
-  function getVisibleCount() {
-    const w = window.innerWidth;
-    if (w > 1024) return 3;
-    if (w > 640) return 2;
-    return 1;
-  }
-
   function getMaxIndex() {
-    return Math.max(0, cards.length - getVisibleCount());
+    return Math.max(0, cards.length - config.getVisibleCount());
   }
 
   function renderDots() {
@@ -753,7 +772,7 @@ function initLiveinSlider() {
     for (let i = 0; i < totalDots; i++) {
       const dot = document.createElement('button');
       dot.className = 'slider-dot' + (i === currentIndex ? ' active' : '');
-      dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+      dot.setAttribute('aria-label', (config.dotLabelPrefix || 'Slide ') + (i + 1));
       dot.addEventListener('click', () => {
         currentIndex = i;
         updateSlider();
@@ -769,8 +788,10 @@ function initLiveinSlider() {
     if (currentIndex > maxIdx) currentIndex = maxIdx;
     if (currentIndex < 0) currentIndex = 0;
 
-    const cardWidth = cards[0].getBoundingClientRect().width;
-    const gap = parseFloat(getComputedStyle(track).gap) || 24;
+    const firstCard = cards[0];
+    const cardRect = firstCard.getBoundingClientRect();
+    const cardWidth = cardRect.width;
+    const gap = parseFloat(getComputedStyle(track).gap) || 20;
     const step = cardWidth + gap;
     const offset = currentIndex * step;
 
@@ -809,8 +830,9 @@ function initLiveinSlider() {
   });
 
   function startAutoPlay() {
+    if (!config.autoPlayInterval) return;
     stopAutoPlay();
-    autoPlayTimer = setInterval(nextSlide, 4500);
+    autoPlayTimer = setInterval(nextSlide, config.autoPlayInterval);
   }
 
   function stopAutoPlay() {
@@ -843,7 +865,8 @@ function initLiveinSlider() {
 
   track.addEventListener('touchend', () => {
     if (Math.abs(touchDiffX) > 40) {
-      if (touchDiffX < 0) {
+      const isRtl = document.documentElement.dir !== 'ltr';
+      if ((isRtl && touchDiffX > 0) || (!isRtl && touchDiffX < 0)) {
         nextSlide();
       } else {
         prevSlide();
@@ -861,8 +884,61 @@ function initLiveinSlider() {
   updateSlider();
   startAutoPlay();
 
-  window.refreshLiveinSlider = () => {
-    renderDots();
-    updateSlider();
+  return {
+    refresh: () => {
+      renderDots();
+      updateSlider();
+    }
   };
+}
+
+/**
+ * Interactive Live-In & Monthly Contracts Carousel / Slider
+ */
+function initLiveinSlider() {
+  const controller = createCarouselController({
+    sliderId: 'liveinSlider',
+    trackId: 'liveinSliderTrack',
+    prevBtnId: 'liveinSliderPrev',
+    nextBtnId: 'liveinSliderNext',
+    dotsContainerId: 'liveinSliderDots',
+    cardSelector: '.campaign-poster-card',
+    autoPlayInterval: 5000,
+    getVisibleCount: () => {
+      const w = window.innerWidth;
+      if (w > 1024) return 3;
+      if (w > 640) return 2;
+      return 1;
+    }
+  });
+
+  if (controller) {
+    window.refreshLiveinSlider = controller.refresh;
+  }
+}
+
+/**
+ * Interactive Verified Staff Directory Carousel / Slider
+ */
+function initStaffSlider() {
+  const controller = createCarouselController({
+    sliderId: 'staffSlider',
+    trackId: 'staffSliderTrack',
+    prevBtnId: 'staffSliderPrev',
+    nextBtnId: 'staffSliderNext',
+    dotsContainerId: 'staffSliderDots',
+    cardSelector: '.staff-card',
+    autoPlayInterval: 6000,
+    getVisibleCount: () => {
+      const w = window.innerWidth;
+      if (w > 1100) return 4;
+      if (w > 768) return 3;
+      if (w > 480) return 2;
+      return 1;
+    }
+  });
+
+  if (controller) {
+    window.refreshStaffSlider = controller.refresh;
+  }
 }
