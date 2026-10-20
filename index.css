@@ -77,6 +77,8 @@ body {
   text-align: right;
 }
 
+html[dir="ltr"],
+html[dir="ltr"] body,
 body[dir="ltr"] {
   font-family: var(--font-latin);
   direction: ltr;
@@ -204,6 +206,7 @@ button {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-shrink: 0;
 }
 
 .brand-logo-img {
@@ -239,6 +242,8 @@ button {
 .brand-text {
   display: flex;
   flex-direction: column;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .brand-title {
@@ -247,6 +252,7 @@ button {
   color: var(--color-primary);
   line-height: 1.15;
   letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 .brand-subtitle {
@@ -255,12 +261,14 @@ button {
   color: var(--color-cyan-dark);
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  white-space: nowrap;
 }
 
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
+  white-space: nowrap;
 }
 
 .nav-link {
@@ -270,6 +278,7 @@ button {
   position: relative;
   padding-block: 6px;
   white-space: nowrap;
+  unicode-bidi: isolate;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -1343,31 +1352,46 @@ body[dir="ltr"] .footer-link-item a:hover {
   color: #64748b;
 }
 
-/* Floating Action Trigger Bar */
+/* Floating Action Trigger Bar - Dynamically adapts position with language */
 .floating-actions {
   position: fixed;
   bottom: 24px;
-  inset-inline-end: 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
   z-index: 99;
+  transition: right 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), left 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.25s ease;
+}
+
+/* Arabic Mode: Docked on the Right (عربي يمين) */
+html[dir="rtl"] .floating-actions,
+body[dir="rtl"] .floating-actions {
+  right: 24px;
+  left: auto;
+}
+
+/* English Mode: Docked on the Left (تتحرك شمال في تبديل اللغة) */
+html[dir="ltr"] .floating-actions,
+body[dir="ltr"] .floating-actions {
+  left: 24px;
+  right: auto;
 }
 
 .float-action-btn {
-  width: 52px;
-  height: 52px;
+  width: 54px;
+  height: 54px;
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  box-shadow: var(--shadow-lg);
-  transition: var(--transition);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.22);
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease;
 }
 
 .float-action-btn:hover {
   transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.3);
 }
 
 .float-wa {
@@ -1376,6 +1400,13 @@ body[dir="ltr"] .footer-link-item a:hover {
 
 .float-call {
   background: var(--color-coral);
+}
+
+/* Direction-aware navigation arrows in LTR */
+html[dir="ltr"] .btn-outline-white svg,
+html[dir="ltr"] .service-cta-link svg,
+html[dir="ltr"] .staff-action-link svg {
+  transform: rotate(180deg);
 }
 
 /* Responsive Media Queries */
@@ -1556,19 +1587,28 @@ body[dir="ltr"] .footer-link-item a:hover {
     padding: 20px 14px;
   }
 
-  /* Floating quick action buttons */
+  /* Floating quick action buttons responsive positioning */
   .floating-actions {
     bottom: 16px;
-    inset-inline-start: 14px;
     gap: 8px;
   }
+  html[dir="rtl"] .floating-actions,
+  body[dir="rtl"] .floating-actions {
+    right: 14px;
+    left: auto;
+  }
+  html[dir="ltr"] .floating-actions,
+  body[dir="ltr"] .floating-actions {
+    left: 14px;
+    right: auto;
+  }
   .float-action-btn {
-    width: 46px;
-    height: 46px;
+    width: 48px;
+    height: 48px;
   }
   .float-action-btn svg {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
   }
 
   /* Mobile Paragraph Typography & Readability (اعادة تنسيق النصوص والفقرات) */
