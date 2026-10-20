@@ -8,6 +8,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initLanguageToggle();
   initMobileMenu();
+  initLiveinSlider();
   initFaqAccordion();
   initSmoothScroll();
   initStickyHeader();
@@ -270,7 +271,11 @@ const translations = {
 
     // Floating Tooltips
     float_wa_title: "مراسلة واتساب: 33498554",
-    float_call_title: "اتصال فوري: 33498554"
+    float_call_title: "اتصال فوري: 33498554",
+
+    // Slider Controls
+    slider_prev: "السابق",
+    slider_next: "التالي"
   },
 
   en: {
@@ -526,7 +531,11 @@ const translations = {
 
     // Floating Tooltips
     float_wa_title: "WhatsApp Inquiry: 33498554",
-    float_call_title: "Instant Call: 33498554"
+    float_call_title: "Instant Call: 33498554",
+
+    // Slider Controls
+    slider_prev: "Previous",
+    slider_next: "Next"
   }
 };
 
@@ -574,6 +583,10 @@ function initLanguageToggle() {
           el.setAttribute('aria-label', transObj[key]);
         }
       });
+    }
+
+    if (window.refreshLiveinSlider) {
+      window.refreshLiveinSlider();
     }
   }
 
@@ -703,4 +716,153 @@ function initStickyHeader() {
       header.classList.remove('scrolled');
     }
   }, { passive: true });
+}
+
+/**
+ * Interactive Live-In & Monthly Contracts Carousel / Slider
+ */
+function initLiveinSlider() {
+  const slider = document.getElementById('liveinSlider');
+  const track = document.getElementById('liveinSliderTrack');
+  const prevBtn = document.getElementById('liveinSliderPrev');
+  const nextBtn = document.getElementById('liveinSliderNext');
+  const dotsContainer = document.getElementById('liveinSliderDots');
+
+  if (!slider || !track || !prevBtn || !nextBtn || !dotsContainer) return;
+
+  const cards = Array.from(track.querySelectorAll('.campaign-poster-card'));
+  if (cards.length === 0) return;
+
+  let currentIndex = 0;
+  let autoPlayTimer = null;
+
+  function getVisibleCount() {
+    const w = window.innerWidth;
+    if (w > 1024) return 3;
+    if (w > 640) return 2;
+    return 1;
+  }
+
+  function getMaxIndex() {
+    return Math.max(0, cards.length - getVisibleCount());
+  }
+
+  function renderDots() {
+    dotsContainer.innerHTML = '';
+    const totalDots = getMaxIndex() + 1;
+    for (let i = 0; i < totalDots; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'slider-dot' + (i === currentIndex ? ' active' : '');
+      dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+      dot.addEventListener('click', () => {
+        currentIndex = i;
+        updateSlider();
+        restartAutoPlay();
+      });
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function updateSlider() {
+    const isRtl = document.documentElement.dir !== 'ltr';
+    const maxIdx = getMaxIndex();
+    if (currentIndex > maxIdx) currentIndex = maxIdx;
+    if (currentIndex < 0) currentIndex = 0;
+
+    const cardWidth = cards[0].getBoundingClientRect().width;
+    const gap = parseFloat(getComputedStyle(track).gap) || 24;
+    const step = cardWidth + gap;
+    const offset = currentIndex * step;
+
+    track.style.transform = `translateX(${isRtl ? offset : -offset}px)`;
+
+    prevBtn.classList.toggle('disabled', currentIndex === 0);
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.classList.toggle('disabled', currentIndex >= maxIdx);
+    nextBtn.disabled = currentIndex >= maxIdx;
+
+    const dots = dotsContainer.querySelectorAll('.slider-dot');
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle('active', idx === currentIndex);
+    });
+  }
+
+  function nextSlide() {
+    const maxIdx = getMaxIndex();
+    currentIndex = (currentIndex < maxIdx) ? currentIndex + 1 : 0;
+    updateSlider();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : getMaxIndex();
+    updateSlider();
+  }
+
+  nextBtn.addEventListener('click', () => {
+    nextSlide();
+    restartAutoPlay();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    prevSlide();
+    restartAutoPlay();
+  });
+
+  function startAutoPlay() {
+    stopAutoPlay();
+    autoPlayTimer = setInterval(nextSlide, 4500);
+  }
+
+  function stopAutoPlay() {
+    if (autoPlayTimer) {
+      clearInterval(autoPlayTimer);
+      autoPlayTimer = null;
+    }
+  }
+
+  function restartAutoPlay() {
+    stopAutoPlay();
+    startAutoPlay();
+  }
+
+  slider.addEventListener('mouseenter', stopAutoPlay);
+  slider.addEventListener('mouseleave', startAutoPlay);
+
+  let touchStartX = 0;
+  let touchDiffX = 0;
+
+  track.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchDiffX = 0;
+    stopAutoPlay();
+  }, { passive: true });
+
+  track.addEventListener('touchmove', (e) => {
+    touchDiffX = e.touches[0].clientX - touchStartX;
+  }, { passive: true });
+
+  track.addEventListener('touchend', () => {
+    if (Math.abs(touchDiffX) > 40) {
+      if (touchDiffX < 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
+    startAutoPlay();
+  });
+
+  window.addEventListener('resize', () => {
+    renderDots();
+    updateSlider();
+  });
+
+  renderDots();
+  updateSlider();
+  startAutoPlay();
+
+  window.refreshLiveinSlider = () => {
+    renderDots();
+    updateSlider();
+  };
 }

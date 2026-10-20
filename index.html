@@ -317,91 +317,108 @@
           <p class="section-desc" data-i18n="livein_desc">نوفر باقات مبيت شهرية متكاملة تضمن لعائلتك أعلى درجات الراحة والأمان، مع كوادر مدربة وفحص طبي شامل وكفالة قانونية كاملة.</p>
         </div>
 
-        <div class="campaign-posters-grid">
-          <!-- Poster 1 -->
-          <div class="campaign-poster-card">
-            <div class="campaign-poster-img-wrap">
-              <img src="images/campaign-live-in-comfort.webp" alt="تنظيف احترافي ومبيت يوفر لك أعلى درجات الراحة" loading="lazy">
-              <span class="campaign-badge-overlay"><span data-i18n="livein_c1_badge">باقة الراحة الكاملة</span></span>
-            </div>
-            <div class="campaign-poster-body">
-              <div>
-                <h3 class="campaign-poster-title"><span data-i18n="livein_c1_title">تنظيف احترافي ومبيت شهري دائم</span></h3>
-                <p class="campaign-poster-desc"><span data-i18n="livein_c1_desc">عاملات إقامة دائمة ومبيت شهري مدربات على إدارة شؤون الفلل والمنازل والضيافة بأعلى معايير الخصوصية.</span></p>
+        <!-- Live-In Offers & Monthly Contracts Interactive Slider / Carousel -->
+        <div class="livein-slider-wrapper" id="liveinSlider" role="region" aria-label="سلايدر عروض المبيت والتعاقد الشهري">
+          <!-- Slider Navigation Arrow Buttons -->
+          <button class="slider-nav-btn slider-prev" id="liveinSliderPrev" aria-label="السابق" title="السابق" data-i18n-title="slider_prev">
+            <svg class="slider-arrow-prev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+          <button class="slider-nav-btn slider-next" id="liveinSliderNext" aria-label="التالي" title="التالي" data-i18n-title="slider_next">
+            <svg class="slider-arrow-next" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+
+          <!-- Slider Viewport -->
+          <div class="livein-slider-viewport">
+            <div class="livein-slider-track" id="liveinSliderTrack">
+              <!-- Poster 1 -->
+              <div class="campaign-poster-card">
+                <div class="campaign-poster-img-wrap">
+                  <img src="images/campaign-live-in-comfort.webp" alt="تنظيف احترافي ومبيت يوفر لك أعلى درجات الراحة" loading="lazy">
+                  <span class="campaign-badge-overlay"><span data-i18n="livein_c1_badge">باقة الراحة الكاملة</span></span>
+                </div>
+                <div class="campaign-poster-body">
+                  <div>
+                    <h3 class="campaign-poster-title"><span data-i18n="livein_c1_title">تنظيف احترافي ومبيت شهري دائم</span></h3>
+                    <p class="campaign-poster-desc"><span data-i18n="livein_c1_desc">عاملات إقامة دائمة ومبيت شهري مدربات على إدارة شؤون الفلل والمنازل والضيافة بأعلى معايير الخصوصية.</span></p>
+                  </div>
+                  <div class="campaign-poster-footer">
+                    <a href="https://wa.me/97433498554?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%84%D9%88%D8%A8%20%D9%83%D9%84%D9%8A%D9%86%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D9%85%D8%A8%D9%8A%D8%AA%20%D8%A7%D9%84%D8%B4%D9%87%D8%B1%D9%8A%20%D9%83%D8%A7%D9%85%D9%84%20%D8%A7%D9%84%D8%B1%D8%A7%D8%AD%D8%A9" target="_blank" rel="noopener noreferrer" class="btn btn-coral" style="width:100%;"><span data-i18n="book_now_btn">احجز الآن على 33498554</span></a>
+                  </div>
+                </div>
               </div>
-              <div class="campaign-poster-footer">
-                <a href="https://wa.me/97433498554?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%84%D9%88%D8%A8%20%D9%83%D9%84%D9%8A%D9%86%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D9%85%D8%A8%D9%8A%D8%AA%20%D8%A7%D9%84%D8%B4%D9%87%D8%B1%D9%8A%20%D9%83%D8%A7%D9%85%D9%84%20%D8%A7%D9%84%D8%B1%D8%A7%D8%AD%D8%A9" target="_blank" rel="noopener noreferrer" class="btn btn-coral" style="width:100%;"><span data-i18n="book_now_btn">احجز الآن على 33498554</span></a>
+
+              <!-- Poster 2 -->
+              <div class="campaign-poster-card">
+                <div class="campaign-poster-img-wrap">
+                  <img src="images/campaign-education-first.webp" alt="وقتك للأهم والتعليم أولويتك ونظافة بيتك مسؤوليتنا" loading="lazy">
+                  <span class="campaign-badge-overlay"><span data-i18n="livein_c2_badge">باقة دعم الأسرة والتعليم</span></span>
+                </div>
+                <div class="campaign-poster-body">
+                  <div>
+                    <h3 class="campaign-poster-title"><span data-i18n="livein_c2_title">وقتك للأهم... ونظافة بيتك مسؤوليتنا</span></h3>
+                    <p class="campaign-poster-desc"><span data-i18n="livein_c2_desc">تفرغي لتدريس أبنائك والاهتمام بمستقبلهم، ودعي أعمال النظافة والطهي والترتيب لعاملاتنا المقيمات.</span></p>
+                  </div>
+                  <div class="campaign-poster-footer">
+                    <a href="https://wa.me/97433498554?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%84%D9%88%D8%A8%20%D9%83%D9%84%D9%8A%D9%86%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%AF%D8%B9%D9%85%20%D8%A7%D9%84%D8%A3%D8%B3%D8%B1%D8%A9%20%D9%88%D8%A7%D9%84%D8%AA%D8%B9%D8%A4%D9%84%D9%8A%D9%85" target="_blank" rel="noopener noreferrer" class="btn btn-coral" style="width:100%;"><span data-i18n="book_now_btn">احجز الآن على 33498554</span></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Poster 3 -->
+              <div class="campaign-poster-card">
+                <div class="campaign-poster-img-wrap">
+                  <img src="images/campaign-study-cleaning.webp" alt="وقتك مع أولادك للدرس ووقتنا لتنظيف البيت" loading="lazy">
+                  <span class="campaign-badge-overlay"><span data-i18n="livein_c3_badge">باقة البيت الهادئ</span></span>
+                </div>
+                <div class="campaign-poster-body">
+                  <div>
+                    <h3 class="campaign-poster-title"><span data-i18n="livein_c3_title">وقتك مع أولادك... ووقتنا للمنزل</span></h3>
+                    <p class="campaign-poster-desc"><span data-i18n="livein_c3_desc">خدمات رعاية متكاملة تشمل تدبير شؤون الغرف، تعقيم الأسطح، غسيل وكي الملابس وتحضير الوجبات.</span></p>
+                  </div>
+                  <div class="campaign-poster-footer">
+                    <a href="https://wa.me/97433498554?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%84%D9%88%D8%A8%20%D9%83%D9%84%D9%8A%D9%86%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%A8%D9%8A%D8%AA%20%D8%A7%D9%84%D9%87%D8%A7%D8%AF%D8%A6" target="_blank" rel="noopener noreferrer" class="btn btn-coral" style="width:100%;"><span data-i18n="book_now_btn">احجز الآن على 33498554</span></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Poster 4 -->
+              <div class="campaign-poster-card">
+                <div class="campaign-poster-img-wrap">
+                  <img src="images/campaign-peace-of-mind.webp" alt="خدماتنا تبدأ بالنظافة وتنتهي براحة بالك" loading="lazy">
+                  <span class="campaign-badge-overlay"><span data-i18n="livein_c4_badge">راحة البال والضمان</span></span>
+                </div>
+                <div class="campaign-poster-body">
+                  <div>
+                    <h3 class="campaign-poster-title"><span data-i18n="livein_c4_title">تبدأ بالنظافة... وتنتهي براحة بالك</span></h3>
+                    <p class="campaign-poster-desc"><span data-i18n="livein_c4_desc">ضمان استبدال فوري عند الحاجة، مع إشراف ومتابعة دورية من قسم خدمة العملاء على مدار الساعة.</span></p>
+                  </div>
+                  <div class="campaign-poster-footer">
+                    <a href="https://wa.me/97433498554?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%84%D9%88%D8%A8%20%D9%83%D9%84%D9%8A%D9%86%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%B1%D8%A7%D8%AD%D8%A9%20%D8%A7%D9%84%D8%A8%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="btn btn-coral" style="width:100%;"><span data-i18n="book_now_btn">احجز الآن على 33498554</span></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Poster 5 -->
+              <div class="campaign-poster-card">
+                <div class="campaign-poster-img-wrap">
+                  <img src="images/campaign-tidy-home.webp" alt="بيت مرتب ومكان مريح كل اللي تحتاجه عندنا" loading="lazy">
+                  <span class="campaign-badge-overlay"><span data-i18n="livein_c5_badge">الترتيب الشامل</span></span>
+                </div>
+                <div class="campaign-poster-body">
+                  <div>
+                    <h3 class="campaign-poster-title"><span data-i18n="livein_c5_title">بيت مرتب ومكان مريح كل ما تحتاجه</span></h3>
+                    <p class="campaign-poster-desc"><span data-i18n="livein_c5_desc">تنظيم الخزائن، تنظيف الأثاث، العناية بالمجالس والمفروشات بأيدي خبيرات معتمدات في قطر.</span></p>
+                  </div>
+                  <div class="campaign-poster-footer">
+                    <a href="https://wa.me/97433498554?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%84%D9%88%D8%A8%20%D9%83%D9%84%D9%8A%D9%86%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B1%D8%AA%D9%8A%D8%A8%20%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D9%84" target="_blank" rel="noopener noreferrer" class="btn btn-coral" style="width:100%;"><span data-i18n="book_now_btn">احجز الآن على 33498554</span></a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Poster 2 -->
-          <div class="campaign-poster-card">
-            <div class="campaign-poster-img-wrap">
-              <img src="images/campaign-education-first.webp" alt="وقتك للأهم والتعليم أولويتك ونظافة بيتك مسؤوليتنا" loading="lazy">
-              <span class="campaign-badge-overlay"><span data-i18n="livein_c2_badge">باقة دعم الأسرة والتعليم</span></span>
-            </div>
-            <div class="campaign-poster-body">
-              <div>
-                <h3 class="campaign-poster-title"><span data-i18n="livein_c2_title">وقتك للأهم... ونظافة بيتك مسؤوليتنا</span></h3>
-                <p class="campaign-poster-desc"><span data-i18n="livein_c2_desc">تفرغي لتدريس أبنائك والاهتمام بمستقبلهم، ودعي أعمال النظافة والطهي والترتيب لعاملاتنا المقيمات.</span></p>
-              </div>
-              <div class="campaign-poster-footer">
-                <a href="https://wa.me/97433498554?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%84%D9%88%D8%A8%20%D9%83%D9%84%D9%8A%D9%86%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%AF%D8%B9%D9%85%20%D8%A7%D9%84%D8%A3%D8%B3%D8%B1%D8%A9%20%D9%88%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%8A%D9%85" target="_blank" rel="noopener noreferrer" class="btn btn-coral" style="width:100%;"><span data-i18n="book_now_btn">احجز الآن على 33498554</span></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Poster 3 -->
-          <div class="campaign-poster-card">
-            <div class="campaign-poster-img-wrap">
-              <img src="images/campaign-study-cleaning.webp" alt="وقتك مع أولادك للدرس ووقتنا لتنظيف البيت" loading="lazy">
-              <span class="campaign-badge-overlay"><span data-i18n="livein_c3_badge">باقة البيت الهادئ</span></span>
-            </div>
-            <div class="campaign-poster-body">
-              <div>
-                <h3 class="campaign-poster-title"><span data-i18n="livein_c3_title">وقتك مع أولادك... ووقتنا للمنزل</span></h3>
-                <p class="campaign-poster-desc"><span data-i18n="livein_c3_desc">خدمات رعاية متكاملة تشمل تدبير شؤون الغرف، تعقيم الأسطح، غسيل وكي الملابس وتحضير الوجبات.</span></p>
-              </div>
-              <div class="campaign-poster-footer">
-                <a href="https://wa.me/97433498554?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%84%D9%88%D8%A8%20%D9%83%D9%84%D9%8A%D9%86%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%A8%D9%8A%D8%AA%20%D8%A7%D9%84%D9%87%D8%A7%D8%AF%D8%A6" target="_blank" rel="noopener noreferrer" class="btn btn-coral" style="width:100%;"><span data-i18n="book_now_btn">احجز الآن على 33498554</span></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Poster 4 -->
-          <div class="campaign-poster-card">
-            <div class="campaign-poster-img-wrap">
-              <img src="images/campaign-peace-of-mind.webp" alt="خدماتنا تبدأ بالنظافة وتنتهي براحة بالك" loading="lazy">
-              <span class="campaign-badge-overlay"><span data-i18n="livein_c4_badge">راحة البال والضمان</span></span>
-            </div>
-            <div class="campaign-poster-body">
-              <div>
-                <h3 class="campaign-poster-title"><span data-i18n="livein_c4_title">تبدأ بالنظافة... وتنتهي براحة بالك</span></h3>
-                <p class="campaign-poster-desc"><span data-i18n="livein_c4_desc">ضمان استبدال فوري عند الحاجة، مع إشراف ومتابعة دورية من قسم خدمة العملاء على مدار الساعة.</span></p>
-              </div>
-              <div class="campaign-poster-footer">
-                <a href="https://wa.me/97433498554?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%84%D9%88%D8%A8%20%D9%83%D9%84%D9%8A%D9%86%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%B1%D8%A7%D8%AD%D8%A9%20%D8%A7%D9%84%D8%A8%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="btn btn-coral" style="width:100%;"><span data-i18n="book_now_btn">احجز الآن على 33498554</span></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Poster 5 -->
-          <div class="campaign-poster-card">
-            <div class="campaign-poster-img-wrap">
-              <img src="images/campaign-tidy-home.webp" alt="بيت مرتب ومكان مريح كل اللي تحتاجه عندنا" loading="lazy">
-              <span class="campaign-badge-overlay"><span data-i18n="livein_c5_badge">الترتيب الشامل</span></span>
-            </div>
-            <div class="campaign-poster-body">
-              <div>
-                <h3 class="campaign-poster-title"><span data-i18n="livein_c5_title">بيت مرتب ومكان مريح كل ما تحتاجه</span></h3>
-                <p class="campaign-poster-desc"><span data-i18n="livein_c5_desc">تنظيم الخزائن، تنظيف الأثاث، العناية بالمجالس والمفروشات بأيدي خبيرات معتمدات في قطر.</span></p>
-              </div>
-              <div class="campaign-poster-footer">
-                <a href="https://wa.me/97433498554?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%84%D9%88%D8%A8%20%D9%83%D9%84%D9%8A%D9%86%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B1%D8%AA%D9%8A%D8%A8%20%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D9%84" target="_blank" rel="noopener noreferrer" class="btn btn-coral" style="width:100%;"><span data-i18n="book_now_btn">احجز الآن على 33498554</span></a>
-              </div>
-            </div>
-          </div>
+          <!-- Slider Pagination Dots -->
+          <div class="slider-dots-container" id="liveinSliderDots" aria-label="مؤشرات السلايدر"></div>
         </div>
       </div>
     </section>
