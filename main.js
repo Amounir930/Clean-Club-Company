@@ -26,7 +26,7 @@ const translations = {
 
     // Top Bar
     top_location: "الدوحة، دولة قطر",
-    top_hours: "السبت — الخميس: 7:00 ص — 11:30 م",
+    top_hours: "يومياً: 8:00 ص — 8:00 م",
     top_wa_pill: "واتساب فوري 24/7",
     brand_title: "شركة كلاب كلين",
     brand_subtitle: "للتنظيفات والضيافة والخدمات",
@@ -282,7 +282,7 @@ const translations = {
     footer_s_hospitality: "خدمات الضيافة وكي العباءات",
     footer_website_label: "الموقع:",
     footer_rights: "جميع الحقوق محفوظة © 2026 شركة كلاب كلين للتنظيفات والضيافة والخدمات - دولة قطر.",
-    footer_timing: "رقم الحجز السريع: 33498554 | متاح السبت - الخميس: 7:00 ص - 11:30 م",
+    footer_timing: "رقم الحجز السريع: 33498554 | متاح يومياً: 8:00 ص — 8:00 م",
 
     // Floating Tooltips
     float_wa_title: "مراسلة واتساب: 33498554",
@@ -299,7 +299,7 @@ const translations = {
 
     // Top Bar
     top_location: "Doha, State of Qatar",
-    top_hours: "Sat — Thu: 7:00 AM — 11:30 PM",
+    top_hours: "Daily: 8:00 AM — 8:00 PM",
     top_wa_pill: "Instant WhatsApp 24/7",
     brand_title: "Clean Club",
     brand_subtitle: "Hospitality & Services",
@@ -555,7 +555,7 @@ const translations = {
     footer_s_hospitality: "Hospitality & Abaya Steaming",
     footer_website_label: "Website:",
     footer_rights: "All Rights Reserved © 2026 Clean Club Company for Cleaning & Hospitality - Qatar.",
-    footer_timing: "Fast Booking Hotline: 33498554 | Open Sat - Thu: 7:00 AM - 11:30 PM",
+    footer_timing: "Fast Booking Hotline: 33498554 | Open Daily: 8:00 AM — 8:00 PM",
 
     // Floating Tooltips
     float_wa_title: "WhatsApp Inquiry: 33498554",
