@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 const translations = {
   ar: {
+    // Page Title & Meta
+    page_title: "cleanclubqatar.online - شركة كلاب كلين للتنظيفات والضيافة والخدمات - خبرة، ثقة، وضمان - هاتف: 33498554",
+
     // Top Bar
     top_location: "الدوحة، دولة قطر",
     top_hours: "السبت — الخميس: 7:00 ص — 11:30 م",
@@ -283,6 +286,9 @@ const translations = {
   },
 
   en: {
+    // Page Title & Meta
+    page_title: "cleanclubqatar.online - Clean Club Hospitality & Cleaning Services - Live-In Maids & Monthly Contracts - Tel: +974 33498554",
+
     // Top Bar
     top_location: "Doha, State of Qatar",
     top_hours: "Sat — Thu: 7:00 AM — 11:30 PM",
@@ -587,6 +593,10 @@ function initLanguageToggle() {
     // Update all elements with data-i18n
     const transObj = translations[lang];
     if (transObj) {
+      if (transObj.page_title) {
+        document.title = transObj.page_title;
+      }
+
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (transObj[key]) {
