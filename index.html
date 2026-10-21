@@ -44,8 +44,10 @@
         var theme = localStorage.getItem('cleanclub_theme');
         if (theme === 'dark') {
           document.documentElement.setAttribute('data-theme', 'dark');
+          if (document.body) document.body.setAttribute('data-theme', 'dark');
         } else {
           document.documentElement.setAttribute('data-theme', 'light');
+          if (document.body) document.body.setAttribute('data-theme', 'light');
         }
       } catch (e) {}
     })();

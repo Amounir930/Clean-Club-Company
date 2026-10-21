@@ -604,6 +604,9 @@ function initThemeToggle() {
     currentTheme = theme;
     localStorage.setItem('cleanclub_theme', theme);
     document.documentElement.setAttribute('data-theme', theme);
+    if (document.body) {
+      document.body.setAttribute('data-theme', theme);
+    }
     updateThemeUI(theme);
   }
 
