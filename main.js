@@ -46,10 +46,14 @@ const translations = {
     drawer_wa_btn: "مراسلة واتساب: 33498554",
 
     // Hero Section
-    hero_badge: "شركة كلاب كلين للتنظيفات والضيافة والخدمات",
+    hero_badge: "شركة قطرية رائدة",
+    hero_title_1: "نظافة تليق بك",
+    hero_title_2: "خدمة تستحق الثقة",
     hero_title: "نظام المبيت والتعاقد الشهري",
     hero_accent: "عاملات منزليات ومحترفات ضيافة معتمدات في قطر",
-    hero_desc: "نوفر لعملائنا في قطر عاملات منزليات ومحترفات ضيافة مدربات على أعلى معايير الجودة والأمان بنظام المبيت والتعاقد الشهري واليومي المرن. كفالة قانونية وفحص طبي شامل وضمان استبدال فوري.",
+    hero_desc: "في كلاب كلين، نقدم حلول تنظيف وضيافة متكاملة بأعلى معايير الجودة والاحترافية لنوفر لك بيئة نظيفة وآمنة تعكس التميز.",
+    hero_cta_contact: "تواصل معنا الآن",
+    hero_cta_services: "استكشف خدماتنا",
     hero_wa_btn: "احجز عبر واتساب: 33498554",
     hero_call_btn: "اتصال مباشر: 33498554",
     hero_spec_1: "عاملات مدربات وفحص طبي شامل من القومسيون الطبي",
@@ -312,10 +316,14 @@ const translations = {
     drawer_wa_btn: "Chat on WhatsApp: 33498554",
 
     // Hero Section
-    hero_badge: "Clean Club Hospitality & Cleaning Services",
+    hero_badge: "Leading Qatari Company",
+    hero_title_1: "Cleanliness That Befits You",
+    hero_title_2: "Service Worthy of Trust",
     hero_title: "Live-In Maids & Monthly Contracts",
     hero_accent: "Certified Domestic Workers & Hospitality Staff in Qatar",
-    hero_desc: "Providing clients across Qatar with certified domestic workers and hospitality professionals trained to the highest safety and hygiene standards under flexible monthly, live-in, and daily arrangements. Full legal sponsorship, medical screening, and replacement guarantee.",
+    hero_desc: "At Clean Club, we provide comprehensive cleaning and hospitality solutions adhering to the highest standards of quality and professionalism, ensuring a spotless, secure environment reflecting excellence.",
+    hero_cta_contact: "Contact Us Now",
+    hero_cta_services: "Explore Our Services",
     hero_wa_btn: "Book via WhatsApp: 33498554",
     hero_call_btn: "Direct Call: 33498554",
     hero_spec_1: "Medically screened staff with certified health cards",
