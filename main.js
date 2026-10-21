@@ -310,13 +310,13 @@ const translations = {
 
     // Navigation
     nav_home: "Home",
-    nav_livein: "Live-In Contracts",
-    nav_services: "Our Services",
+    nav_livein: "Live-In",
+    nav_services: "Services",
     nav_whyus: "Why Us",
-    nav_staff: "Staff Directory",
-    nav_gallery: "Operations Gallery",
-    nav_process: "Booking Process",
-    nav_contact: "Contact Us",
+    nav_staff: "Staff",
+    nav_gallery: "Gallery",
+    nav_process: "Process",
+    nav_contact: "Contact",
 
     drawer_call_btn: "Instant Call: 33498554",
     drawer_wa_btn: "Chat on WhatsApp: 33498554",
@@ -665,9 +665,7 @@ function initLanguageToggle() {
 
     // Update toggle button text
     updateButtonLabels(lang);
-    if (window.refreshThemeLabels) {
-      window.refreshThemeLabels();
-    }
+
 
     // Update all elements with data-i18n
     const transObj = translations[lang];
@@ -697,6 +695,9 @@ function initLanguageToggle() {
     }
     if (window.refreshStaffSlider) {
       window.refreshStaffSlider();
+    }
+    if (window.refreshThemeLabels) {
+      window.refreshThemeLabels();
     }
   }
 

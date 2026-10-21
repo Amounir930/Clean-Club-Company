@@ -50,7 +50,7 @@
   --radius-lg: 16px;
   --radius-full: 9999px;
 
-  --container-max: 1240px;
+  --container-max: 1320px;
   --transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
@@ -273,13 +273,14 @@ button {
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
   background: #f1f5f9;
   padding: 4px 6px;
   border-radius: var(--radius-full);
   border: 1px solid var(--color-border);
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04) inset;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .nav-link {
@@ -313,7 +314,13 @@ button {
 .header-action-group {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.header-call-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .btn-lang-toggle {
@@ -1737,6 +1744,31 @@ html[dir="ltr"] .staff-action-link svg {
   }
 }
 
+@media (max-width: 1260px) and (min-width: 993px) {
+  .nav-inner {
+    gap: 8px;
+  }
+  .desktop-nav {
+    gap: 2px;
+    padding: 3px 4px;
+  }
+  .nav-link {
+    font-size: 12.5px;
+    padding: 5px 8px;
+  }
+  .header-action-group {
+    gap: 6px;
+  }
+  .btn-theme-toggle,
+  .btn-lang-toggle {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+  .header-call-btn {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+}
 @media (max-width: 1140px) and (min-width: 993px) {
   .desktop-nav {
     gap: 2px;
