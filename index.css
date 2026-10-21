@@ -5,10 +5,10 @@
    Rule Enforcement: Absolute Zero Emojis Across All CSS & Pseudo Elements
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --font-arabic: 'Tajawal', 'Cairo', system-ui, -apple-system, sans-serif;
+  --font-arabic: 'Cairo', system-ui, -apple-system, sans-serif;
   --font-latin: 'Outfit', system-ui, -apple-system, sans-serif;
 
   /* Color Palette - Directly Extracted from Official Corporate Logo */
@@ -442,19 +442,19 @@ button {
 }
 
 .hero-container {
-  max-width: 1200px;
+  max-width: 1300px;
   position: relative;
   z-index: 1;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(28px, 4vw, 52px);
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(32px, 4vw, 56px);
   align-items: center;
 }
 
-/* Right Column (in RTL): Eyebrow Pill, Two-Tone Title, Description & Action Buttons */
+/* Right Column (in RTL): Company Name First, Eyebrow Pill, Slogan & Action Buttons */
 .hero-content-col {
   display: flex;
   flex-direction: column;
@@ -474,12 +474,12 @@ html[dir="ltr"] .hero-content-col {
   background: #eef4ff;
   color: #1e40af;
   border: 1px solid #dbeafe;
-  padding: 6px 16px;
+  padding: 5px 14px;
   border-radius: 999px;
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 700;
-  margin-bottom: 18px;
-  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.06);
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(30, 64, 175, 0.05);
 }
 
 .hero-pill-icon {
@@ -487,33 +487,43 @@ html[dir="ltr"] .hero-content-col {
   flex-shrink: 0;
 }
 
-/* Two-Tone Main Heading */
+/* Company Brand Name as Balanced Corporate Anchor */
+.hero-brand-headline {
+  font-size: clamp(17px, 1.6vw, 22px);
+  font-weight: 800;
+  line-height: 1.4;
+  color: #1b3352;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+/* Two-Tone Main Hero Headline (Matching Image 3 Reference) */
 .hero-main-title {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  font-size: clamp(28px, 3.8vw, 48px);
+  gap: 4px;
+  font-size: clamp(28px, 3.4vw, 44px);
   font-weight: 900;
   line-height: 1.25;
   letter-spacing: -0.015em;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .hero-title-blue {
-  color: #1e3a8a;
+  color: #1d4ed8;
 }
 
 .hero-title-dark {
   color: #0f172a;
 }
 
-/* Concise Descriptive Sentence */
+/* Harmonized Concise Descriptive Paragraph */
 .hero-desc {
-  font-size: clamp(14.5px, 1.2vw, 17px);
+  font-size: clamp(15px, 1.15vw, 16.5px);
   color: #475569;
   line-height: 1.85;
-  margin-bottom: 26px;
-  max-width: 620px;
+  margin-bottom: 24px;
+  max-width: 580px;
   font-weight: 500;
 }
 
@@ -522,7 +532,7 @@ html[dir="ltr"] .hero-content-col {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
 .btn-hero-primary {
@@ -532,19 +542,19 @@ html[dir="ltr"] .hero-content-col {
   gap: 10px;
   background: #1e3a8a;
   color: #ffffff !important;
-  font-size: 15px;
+  font-size: 14.5px;
   font-weight: 700;
-  padding: 13px 28px;
+  padding: 12px 26px;
   border-radius: 999px;
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(30, 58, 138, 0.25);
+  box-shadow: 0 4px 14px rgba(30, 58, 138, 0.22);
   transition: all 0.25s ease;
 }
 
 .btn-hero-primary:hover {
   background: #172554;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(30, 58, 138, 0.35);
+  box-shadow: 0 6px 20px rgba(30, 58, 138, 0.32);
 }
 
 .btn-hero-outline {
@@ -555,9 +565,9 @@ html[dir="ltr"] .hero-content-col {
   background: #ffffff;
   color: #1e3a8a !important;
   border: 1.5px solid #cbd5e1;
-  font-size: 15px;
+  font-size: 14.5px;
   font-weight: 700;
-  padding: 12px 26px;
+  padding: 11px 24px;
   border-radius: 999px;
   text-decoration: none;
   transition: all 0.25s ease;
@@ -589,7 +599,7 @@ html[dir="ltr"] .btn-hero-outline:hover .hero-arrow-icon {
   transform: translateX(3px);
 }
 
-/* Left Column (in RTL): Small Frame Housing Full Complete Photo */
+/* Left Column (in RTL): Enlarged High-Visibility Frame Housing Full Complete Photo */
 .hero-media-col {
   display: flex;
   justify-content: center;
@@ -599,19 +609,19 @@ html[dir="ltr"] .btn-hero-outline:hover .hero-arrow-icon {
 
 .hero-photo-frame {
   width: 100%;
-  max-width: 480px;
+  max-width: 620px;
   background: #ffffff;
   border: 1px solid var(--color-border);
   border-radius: 20px;
-  padding: 10px;
-  box-shadow: 0 14px 38px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(226, 232, 240, 0.6);
+  padding: 12px;
+  box-shadow: 0 16px 44px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(226, 232, 240, 0.6);
   overflow: hidden;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .hero-photo-frame:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 22px 52px rgba(15, 23, 42, 0.12);
 }
 
 .hero-full-photo {
@@ -620,19 +630,23 @@ html[dir="ltr"] .btn-hero-outline:hover .hero-arrow-icon {
   aspect-ratio: 3 / 2;
   object-fit: contain;
   display: block;
-  border-radius: 12px;
+  border-radius: 14px;
   background: #f1f5f9;
 }
 
 @media (max-width: 991px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 32px;
   }
 
   .hero-content-col {
     text-align: center;
     align-items: center;
+  }
+
+  .hero-brand-headline {
+    text-align: center;
   }
 
   .hero-eyebrow-pill {
@@ -644,7 +658,7 @@ html[dir="ltr"] .btn-hero-outline:hover .hero-arrow-icon {
   }
 
   .hero-photo-frame {
-    max-width: 460px;
+    max-width: 580px;
     margin-inline: auto;
   }
 }
@@ -1559,6 +1573,18 @@ body[dir="ltr"] .footer-link-item a:hover {
   margin-top: 4px;
 }
 
+.footer-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: right;
+  flex: 1;
+}
+
+html[dir="ltr"] .footer-contact-details {
+  text-align: left;
+}
+
 .footer-bottom {
   padding-top: 28px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -1762,43 +1788,71 @@ html[dir="ltr"] .staff-action-link svg {
     height: 34px;
   }
 
-  /* Hero Section on Mobile - Responsive 2-Column Rules */
+  /* Hero Section on Mobile - Responsive Layout & High Contrast */
   .hero-section {
-    padding-block: 22px 32px;
+    padding-block: 26px 34px;
     max-width: 100vw;
     overflow: hidden;
   }
-  .hero-main-title {
-    font-size: 22px;
+  .hero-eyebrow-pill {
+    font-size: 12.5px;
+    padding: 4px 12px;
+    margin-bottom: 10px;
+    margin-inline: auto;
   }
-  .hero-title-accent {
-    font-size: 13.5px;
-    color: #93c5fd;
+  .hero-brand-headline {
+    font-size: 18.5px;
+    line-height: 1.35;
+    text-align: center;
+    margin-bottom: 8px;
+    color: #1b3352;
+  }
+  .hero-main-title {
+    font-size: 24px;
+    line-height: 1.3;
+    text-align: center;
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+  .hero-title-blue {
+    color: #1d4ed8;
+  }
+  .hero-title-dark {
+    color: #0f172a;
   }
   .hero-desc {
-    font-size: 14px;
-    line-height: 1.75;
-    color: #f1f5f9;
+    font-size: 14.5px;
+    line-height: 1.8;
+    color: #334155 !important;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-inline: 4px;
   }
   .hero-cta-group {
     flex-direction: column;
     width: 100%;
+    max-width: 320px;
+    margin-inline: auto;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
-  .hero-cta-btn {
+  .btn-hero-primary,
+  .btn-hero-outline {
     width: 100%;
     justify-content: center;
-    font-size: 14px;
+    font-size: 14.5px;
     padding: 12px 20px;
   }
-  .hero-specs-list {
-    grid-template-columns: 1fr;
-    gap: 8px;
-    padding-top: 14px;
+  .hero-photo-frame {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+    padding: 8px;
+    border-radius: 16px;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
   }
-  .hero-spec-item {
-    font-size: 12px;
+  .hero-full-photo {
+    border-radius: 10px;
   }
 
 
@@ -1899,11 +1953,26 @@ html[dir="ltr"] .staff-action-link svg {
     font-size: 13px;
     line-height: 1.5;
   }
+  footer {
+    padding-bottom: 105px !important;
+  }
+  .footer-contact-item {
+    gap: 12px;
+    margin-bottom: 14px;
+    align-items: flex-start;
+  }
+  .footer-contact-details {
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
   .footer-bottom {
     flex-direction: column;
     text-align: center;
-    gap: 12px;
-    padding-top: 20px;
+    gap: 8px;
+    padding-top: 18px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.6;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
   .calc-container-card {

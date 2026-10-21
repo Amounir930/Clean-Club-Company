@@ -46,6 +46,7 @@ const translations = {
     drawer_wa_btn: "مراسلة واتساب: 33498554",
 
     // Hero Section
+    hero_company_title: "شركة كلاب كلين للتنظيفات والضيافة والخدمات",
     hero_badge: "شركة قطرية رائدة",
     hero_title_1: "نظافة تليق بك",
     hero_title_2: "خدمة تستحق الثقة",
@@ -316,6 +317,7 @@ const translations = {
     drawer_wa_btn: "Chat on WhatsApp: 33498554",
 
     // Hero Section
+    hero_company_title: "Clean Club Hospitality & Cleaning Services",
     hero_badge: "Leading Qatari Company",
     hero_title_1: "Cleanliness That Befits You",
     hero_title_2: "Service Worthy of Trust",
