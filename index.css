@@ -419,123 +419,134 @@ button {
   transition: var(--transition);
 }
 
-/* Hero Section - Full-bleed Translucent Background like Dania Maids */
+/* Hero Section: Top Visual Banner Showcase + Bottom Organized Info Card */
 .hero-section {
   position: relative;
-  min-height: 85vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-image: 
-    linear-gradient(135deg, rgba(27, 51, 82, 0.84) 0%, rgba(56, 91, 136, 0.78) 45%, rgba(79, 121, 171, 0.76) 100%),
-    url('images/team-hero-full.webp');
-  background-size: cover;
-  background-position: center 20%;
-  background-repeat: no-repeat;
-  color: #ffffff;
-  padding-block: 110px 130px;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  padding-block: 28px 50px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Part 1: Top Image Showcase with Inner Frame */
+.hero-banner-container {
+  max-width: 1100px;
+  margin-inline: auto;
+  margin-bottom: 24px;
+}
+
+.hero-image-frame {
+  background: #ffffff;
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
   overflow: hidden;
 }
 
-/* Smooth gradient fog transition to next section (Dania Maids effect) */
-.hero-section::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  inset-inline: 0;
-  height: 120px;
-  background: linear-gradient(to bottom, 
-    rgba(246, 249, 252, 0) 0%, 
-    rgba(246, 249, 252, 0.35) 45%, 
-    rgba(246, 249, 252, 0.85) 75%, 
-    var(--color-bg-base) 100%
-  );
-  pointer-events: none;
-  z-index: 2;
-}
-
-.hero-centered-container {
+.hero-showcase-img {
   width: 100%;
-  position: relative;
-  z-index: 3;
+  height: auto;
+  max-height: 480px;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 14px;
+  display: block;
+  transition: transform 0.5s ease;
 }
 
-.hero-centered-content {
-  max-width: 880px;
+.hero-image-frame:hover .hero-showcase-img {
+  transform: scale(1.015);
+}
+
+/* Part 2: Bottom Simplified & Focused Info Card */
+.hero-content-container {
+  max-width: 900px;
   margin-inline: auto;
+}
+
+.hero-info-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  padding: clamp(24px, 3.5vw, 40px);
+  box-shadow: 0 10px 32px rgba(15, 23, 42, 0.05);
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
 .hero-badge-row {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(30, 92, 153, 0.08);
+  border: 1px solid rgba(30, 92, 153, 0.2);
+  color: var(--color-primary);
   padding: 6px 18px;
   border-radius: var(--radius-full);
   font-size: 13.5px;
   font-weight: 700;
-  margin-bottom: 22px;
-  backdrop-filter: blur(10px);
+  margin-bottom: 18px;
 }
 
 .hero-badge-dot {
   width: 8px;
   height: 8px;
   border-radius: var(--radius-full);
-  background: #96c2f2;
-  box-shadow: 0 0 10px #96c2f2;
+  background: var(--color-cyan);
+  box-shadow: 0 0 8px rgba(0, 168, 204, 0.5);
+  flex-shrink: 0;
 }
 
 .hero-title {
-  font-size: clamp(28px, 4.4vw, 50px);
+  font-size: clamp(26px, 3.8vw, 42px);
   font-weight: 900;
-  line-height: 1.25;
-  margin-bottom: 20px;
-  letter-spacing: -0.02em;
-  color: #ffffff;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.25);
+  line-height: 1.3;
+  color: var(--color-navy-dark);
+  margin-bottom: 22px;
 }
 
 .hero-title-accent {
-  color: #96c2f2;
+  color: var(--color-primary);
   display: block;
   margin-top: 8px;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.2);
+  font-size: 0.9em;
+  font-weight: 800;
 }
 
-.hero-desc {
-  font-size: clamp(15px, 1.7vw, 17.5px);
-  color: #f1f5f9;
-  line-height: 1.85;
-  margin-bottom: 34px;
-  max-width: 760px;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
-}
-
+/* Focused Direct Action Buttons */
 .hero-cta-group {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  margin-bottom: 36px;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.hero-cta-btn {
+  padding: 14px 28px;
+  font-size: 15.5px;
+}
+
+.hero-desc {
+  font-size: clamp(14.5px, 1.4vw, 16.5px);
+  color: var(--color-text-secondary);
+  line-height: 1.85;
+  margin-bottom: 26px;
+  max-width: 740px;
 }
 
 .hero-stats-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  padding-top: 28px;
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  gap: 20px;
   width: 100%;
-  max-width: 700px;
-  margin-inline: auto;
+  max-width: 760px;
+  padding-top: 22px;
+  border-top: 1px solid var(--color-border);
 }
 
 .hero-stat-card {
@@ -546,21 +557,53 @@ button {
 }
 
 .hero-stat-num {
-  font-size: 30px;
-  font-weight: 800;
-  color: #ffffff;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--color-primary);
   line-height: 1;
 }
 
 .hero-stat-num span {
-  color: #96c2f2;
+  color: var(--color-cyan-dark);
 }
 
 .hero-stat-label {
   font-size: 13px;
-  color: #cbd5e1;
+  color: var(--color-text-secondary);
   margin-top: 6px;
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding-block: 16px 36px;
+  }
+  .hero-banner-container {
+    margin-bottom: 16px;
+  }
+  .hero-image-frame {
+    padding: 6px;
+    border-radius: 14px;
+  }
+  .hero-showcase-img {
+    max-height: 240px;
+    border-radius: 10px;
+  }
+  .hero-info-card {
+    padding: 20px 16px;
+    border-radius: 18px;
+  }
+  .hero-title {
+    font-size: 22px;
+  }
+  .hero-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-stats-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
 
 /* Trusted Partners Marquee */
@@ -2172,29 +2215,39 @@ body[dir="ltr"] .slider-arrow-next {
 .campaign-poster-img-wrap {
   position: relative;
   overflow: hidden;
-  background: #0f172a;
-  aspect-ratio: 4 / 5;
+  background: #f8fafc;
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  margin: 14px 14px 4px;
+  aspect-ratio: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .campaign-poster-img-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  object-fit: contain;
+  border-radius: 12px;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
 .campaign-poster-card:hover .campaign-poster-img-wrap img {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 
 .campaign-badge-overlay {
   position: absolute;
-  top: 14px;
-  inset-inline-start: 14px;
-  background: rgba(27, 51, 82, 0.88);
+  top: 20px;
+  inset-inline-start: 20px;
+  background: rgba(27, 51, 82, 0.92);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: #ffffff;
-  padding: 6px 14px;
+  padding: 5px 14px;
   border-radius: var(--radius-full);
   font-size: 11.5px;
   font-weight: 700;

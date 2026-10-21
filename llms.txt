@@ -2,7 +2,7 @@
 
 > Version: 1.0.0
 > Last Updated: 2026-10-19
-> Project: Clean Club Hospitality & Cleaning Services (شركة كلوب كلين للتنظيفات والضيافة والخدمات)
+> Project: Clean Club Hospitality & Cleaning Services (شركة كلاب كلين للتنظيفات والضيافة والخدمات)
 > Target Market: State of Qatar (دولة قطر - الدوحة، الريان، الوكرة، لوسيل، الخور)
 
 ---
@@ -16,7 +16,7 @@
 
 ## Company Overview & Positioning
 
-- Business Name: شركة كلوب كلين للتنظيفات والضيافة والخدمات (Clean Club Company)
+- Business Name: شركة كلاب كلين للتنظيفات والضيافة والخدمات (Clean Club Company)
 - Primary Specialization: عاملات بنظام المبيت والتعاقد الشهري في قطر (Live-in Maids & Monthly Hospitality Contracts)
 - Primary Booking Hotline: +974 3349 8554 (WhatsApp & Direct Calls)
 - Service Categories:
@@ -48,7 +48,7 @@
 - تنظيف فلل ومنازل الدوحة
 - شركات نظافة بالساعة قطر
 - ضيافة مناسبات قطر
-- هاتف كلوب كلين 33498554
+- هاتف كلاب كلين 33498554
 
 ---
 

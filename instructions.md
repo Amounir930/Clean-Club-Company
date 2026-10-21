@@ -1,6 +1,6 @@
 # Instructions for External Agents & Collaborators
 
-> Project: Clean Club Company (شركة كلوب كلين للتنظيفات والضيافة والخدمات)
+> Project: Clean Club Company (شركة كلاب كلين للتنظيفات والضيافة والخدمات)
 > Target URL: https://amounir930.github.io/Clean-Club-Company/
 > Git Remote: https://github.com/Amounir930/Clean-Club-Company
 

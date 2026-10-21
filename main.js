@@ -24,9 +24,9 @@ const translations = {
     top_location: "الدوحة، دولة قطر",
     top_hours: "السبت — الخميس: 7:00 ص — 11:30 م",
     top_wa_pill: "واتساب فوري 24/7",
-    brand_title: "شركة كلوب كلين",
+    brand_title: "شركة كلاب كلين",
     brand_subtitle: "للتنظيفات والضيافة والخدمات",
-    drawer_brand_title: "كلوب كلين للخدمات",
+    drawer_brand_title: "كلاب كلين للخدمات",
     lang_btn_text: "English",
 
     // Navigation
@@ -44,12 +44,15 @@ const translations = {
 
     // Hero Section
     hero_badge: "الخيار الأول والموثوق في دولة قطر — كفالة معتمدة وضمان استبدال",
-    hero_title: "شركة كلوب كلين للتنظيفات والضيافة والخدمات",
+    hero_title: "شركة كلاب كلين للتنظيفات والضيافة والخدمات",
     hero_accent: "نظام المبيت والتعاقد الشهري",
+    hero_booking_label: "للحجز والاستفسار:",
     hero_desc: "نوفر لعملائنا في قطر عاملات منزليات ومحترفات ضيافة مدربات على أعلى معايير الجودة والأمان بنظام المبيت والعقود الشهرية واليومية المرنة. شريك موثوق معتمد لدى أرقى الفنادق والجهات الحكومية في الدوحة.",
     hero_call_btn: "اتصال مباشر: 33498554",
     hero_wa_btn: "واتساب فوري: 33498554",
     hero_offers_btn: "استعراض عروض وبوسترات المبيت",
+    hero_photo_badge_title: "شركة كلاب كلين",
+    hero_photo_badge_sub: "كادر معتمد ومفحوص طبياً بالزي الرسمي",
 
     stat_1_label: "كوادر مرخصة ومفحوصة طبياً",
     stat_2_label: "معايير فندقية وضيافة راقية",
@@ -123,7 +126,7 @@ const translations = {
     // Why Choose Us
     whyus_eyebrow: "لماذا يختارنا العملاء؟",
     whyus_title: "معايير احترافية تجعلنا الخيار الموثوق في قطر",
-    whyus_desc: "نحن في شركة كلوب كلين ندرك أن المنزل هو مساحة الراحة والخصوصية، ولذلك نختار كوادرنا بعناية فائقة ونخضعهم لبرامج تدريب متقدمة في أساليب التنظيف والضيافة واحترام خصوصية الأسر القطرية.",
+    whyus_desc: "نحن في شركة كلاب كلين ندرك أن المنزل هو مساحة الراحة والخصوصية، ولذلك نختار كوادرنا بعناية فائقة ونخضعهم لبرامج تدريب متقدمة في أساليب التنظيف والضيافة واحترام خصوصية الأسر القطرية.",
     about_overlay_title: "كفاءة معتمدة 100%",
     about_overlay_text: "طاقم مؤهل قانونياً وصحياً بأعلى معايير السلامة المهنية بدولة قطر.",
     p1_title: "فحص أمني وصحي شامل",
@@ -143,7 +146,7 @@ const translations = {
 
     // Staff Directory
     staff_eyebrow: "كوادرنا المعتمدة رسمياً",
-    staff_title: "كادر عاملات ومربيات كلوب كلين",
+    staff_title: "كادر عاملات ومربيات كلاب كلين",
     staff_desc: "طاقم نسائي متكامل ومحترف، حاصل على فحص طبي شامل وإقامات عمل قانونية، مدرب على أعلى معايير التدبير المنزلي والضيافة والخصوصية.",
     staff_status_livein: "متاحة للمبيت",
     staff_status_contract: "متاحة للتعاقد",
@@ -239,12 +242,12 @@ const translations = {
 
     // FAQ
     faq_eyebrow: "إجابات واضحة",
-    faq_title: "الأسئلة الشائعة حول خدمات كلوب كلين",
+    faq_title: "الأسئلة الشائعة حول خدمات كلاب كلين",
     faq_desc: "كل ما تحتاج معرفته عن عقود المبيت، التعاقد الشهري، وإجراءات السلامة.",
     faq_q1: "ما هي شروط ومزايا التعاقد بنظام المبيت الشهري؟",
     faq_a1: "يتيح لكم نظام المبيت الشهري الحصول على عاملة مقيمة داخل المنزل بتفرغ كامل للقيام بكافة أعمال النظافة، الطبخ المساعد، والتدبير المنزلي. يشمل العقد تغطية الإقامة القانونية والفحص الصحي الكامل مع إمكانية استبدال العاملة فوراً في حال عدم التوافق.",
     faq_q2: "هل العاملات والموظفون مفحوصون طبياً ولهم إقامات نظامية؟",
-    faq_a2: "نعم، 100% من كوادر شركة كلوب كلين يعملون تحت كفالتنا القانونية الرسمية ويحملون شهادات صحية سارية صادرة من القومسيون الطبي في قطر، بالإضافة إلى فحص السجل الجنائي لضمان أقصى درجات الأمان لأسرتكم.",
+    faq_a2: "نعم، 100% من كوادر شركة كلاب كلين يعملون تحت كفالتنا القانونية الرسمية ويحملون شهادات صحية سارية صادرة من القومسيون الطبي في قطر، بالإضافة إلى فحص السجل الجنائي لضمان أقصى درجات الأمان لأسرتكم.",
     faq_q3: "كيف يمكنني طلب عاملة أو خدمة تنظيف مستعجلة في نفس اليوم؟",
     faq_a3: "نوفر خدمة الحجز الفوري في نفس اليوم. يكفي الاتصال المباشر على الرقم 33498554 أو إرسال موقعك ورغبتك عبر الواتساب، وسيقوم فريق العمليات بتوجيه أقرب كادر متاح إليك مباشرة.",
     faq_q4: "هل توفر الشركة أدوات ومواد التنظيف أم يتكفل بها العميل؟",
@@ -267,7 +270,7 @@ const translations = {
     footer_s_industrial: "التنظيف الصناعي للمستودعات",
     footer_s_hospitality: "خدمات الضيافة وكي العباءات",
     footer_website_label: "الموقع:",
-    footer_rights: "جميع الحقوق محفوظة © 2026 شركة كلوب كلين للتنظيفات والضيافة والخدمات - دولة قطر.",
+    footer_rights: "جميع الحقوق محفوظة © 2026 شركة كلاب كلين للتنظيفات والضيافة والخدمات - دولة قطر.",
     footer_timing: "رقم الحجز السريع: 33498554 | متاح السبت - الخميس: 7:00 ص - 11:30 م",
 
     // Floating Tooltips
@@ -306,10 +309,13 @@ const translations = {
     hero_badge: "Qatar's Premier & Trusted Choice — Certified Sponsorship & Replacement Guarantee",
     hero_title: "Clean Club Company for Cleaning, Hospitality & Facility Services",
     hero_accent: "Live-In Maids & Flexible Monthly Contracts",
+    hero_booking_label: "Booking & Inquiries:",
     hero_desc: "Providing clients across Qatar with certified domestic workers and hospitality professionals trained to the highest safety and hygiene standards under flexible monthly, live-in, and daily arrangements. A trusted partner to premier 5-star luxury hotels and governmental entities in Doha.",
     hero_call_btn: "Direct Call: 33498554",
     hero_wa_btn: "Instant WhatsApp: 33498554",
     hero_offers_btn: "Explore Live-In Offers & Posters",
+    hero_photo_badge_title: "Clean Club Company",
+    hero_photo_badge_sub: "Certified & Medically Screened Staff",
 
     stat_1_label: "Legally Certified & Medically Screened Staff",
     stat_2_label: "5-Star Hotel & Luxury Hospitality Standards",

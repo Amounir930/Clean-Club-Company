@@ -9,7 +9,7 @@
 
 ### 1.1 Brand Identification
 - **English Trade Name**: Club Clean Hospitality & Services / Clean Club Company
-- **Arabic Trade Name**: كلوب كلين للتنظيفات و الضيافة و الخدمات / شركة كلوب كلين
+- **Arabic Trade Name**: كلاب كلين للتنظيفات و الضيافة و الخدمات / شركة كلاب كلين
 - **Operational Territory**: State of Qatar (دولة قطر)
 - **Primary Domain**: [www.cleanclubqatar.online](http://www.cleanclubqatar.online)
 - **Primary Contact Channels**:
@@ -93,13 +93,13 @@ The company operates at the intersection of commercial facility maintenance, res
 - **English**:
   > Our mission at Clean Club Company is to provide exceptional cleaning and hospitality services in Qatar, delivering pristine and healthy environments for our clients. We are dedicated to exceeding customer expectations by utilizing advanced cleaning techniques, eco-friendly products, and a highly trained team. Our goal is to enhance the comfort and well-being of our clients through a commitment to cleanliness and excellence.
 - **Arabic**:
-  > مهمتنا في شركة كلوب كلين هي تقديم خدمات تنظيف وضيافة استثنائية في قطر، وتوفير بيئات نقية وصحية لعملائنا. نحن ملتزمون بتجاوز توقعات العملاء من خلال استخدام تقنيات التنظيف المتقدمة والمنتجات الصديقة للبيئة وفريق مدرب تدريباً عالياً. هدفنا هو تعزيز راحة ورفاهية عملائنا من خلال الالتزام بالنظافة والتميز.
+  > مهمتنا في شركة كلاب كلين هي تقديم خدمات تنظيف وضيافة استثنائية في قطر، وتوفير بيئات نقية وصحية لعملائنا. نحن ملتزمون بتجاوز توقعات العملاء من خلال استخدام تقنيات التنظيف المتقدمة والمنتجات الصديقة للبيئة وفريق مدرب تدريباً عالياً. هدفنا هو تعزيز راحة ورفاهية عملائنا من خلال الالتزام بالنظافة والتميز.
 
 ### 4.2 Vision Statement (رؤيتنا)
 - **English**:
   > Our vision at Clean Club Company is to be the preferred choice for cleaning and hospitality services in Qatar, known for our superior quality, reliability, and customer satisfaction. We aim to set new standards in the industry by continually improving our processes, adopting innovative technologies, and adhering to sustainable practices. Our vision is to create clean and inviting spaces that promote a sense of well-being and leave a lasting positive impression on our clients.
 - **Arabic**:
-  > رؤيتنا في شركة كلوب كلين هي أن نكون الخيار المفضل لخدمات التنظيف والضيافة في قطر، والمعروفين بالجودة العالية والموثوقية ورضا العملاء. نحن نهدف إلى وضع معايير جديدة في الصناعة من خلال التحسين المستمر لعملياتنا، واعتماد تقنيات مبتكرة، والالتزام بالممارسات المستدامة. تتمثل رؤيتنا في إنشاء مساحات نظيفة وجذابة تعزز الشعور بالرفاهية وتترك انطباعًا إيجابيًا دائمًا لدى عملائنا.
+  > رؤيتنا في شركة كلاب كلين هي أن نكون الخيار المفضل لخدمات التنظيف والضيافة في قطر، والمعروفين بالجودة العالية والموثوقية ورضا العملاء. نحن نهدف إلى وضع معايير جديدة في الصناعة من خلال التحسين المستمر لعملياتنا، واعتماد تقنيات مبتكرة، والالتزام بالممارسات المستدامة. تتمثل رؤيتنا في إنشاء مساحات نظيفة وجذابة تعزز الشعور بالرفاهية وتترك انطباعًا إيجابيًا دائمًا لدى عملائنا.
 
 ### 4.3 Strategic Value Pillars
 1. **Eco-Friendly Sustainability**: Exclusively deploying biodegradable and non-toxic cleaning agents safe for residents, pets, and workplace personnel.
