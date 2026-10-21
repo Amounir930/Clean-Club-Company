@@ -33,8 +33,8 @@
   --color-bg-muted: #eef3f9;
 
   --color-text-main: #0f172a;
-  --color-text-secondary: #334155;
-  --color-text-muted: #64748b;
+  --color-text-secondary: #1e293b;
+  --color-text-muted: #334155;
   --color-text-light: #ffffff;
 
   --color-border: #dbe5f1;
@@ -466,32 +466,37 @@ html[dir="ltr"] .hero-content-col {
   text-align: left;
 }
 
-.hero-brand-eyebrow {
-  display: inline-block;
-  font-size: clamp(15px, 1.4vw, 18px);
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 10px;
-  letter-spacing: 0.01em;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
-}
-
-.hero-main-title {
-  font-size: clamp(24px, 3vw, 38px);
+/* Company Brand Name: Primary, Prominent White Heading */
+.hero-main-brand-title {
+  font-size: clamp(24px, 3.2vw, 40px);
   font-weight: 900;
   line-height: 1.25;
   color: #ffffff;
   margin-bottom: 12px;
   letter-spacing: -0.01em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-.hero-title-accent {
-  display: block;
-  font-size: clamp(14px, 1.3vw, 17px);
-  font-weight: 700;
+/* Service Offering Headline & Data: Scaled Cleanly Underneath */
+.hero-service-subhead {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.hero-service-title {
+  font-size: clamp(16px, 1.8vw, 22px);
+  font-weight: 800;
   color: #93c5fd;
-  margin-top: 6px;
-  line-height: 1.4;
+  line-height: 1.35;
+}
+
+.hero-service-accent {
+  font-size: clamp(13px, 1.2vw, 15px);
+  font-weight: 600;
+  color: #cbd5e1;
+  line-height: 1.45;
 }
 
 .hero-desc {
@@ -2374,10 +2379,14 @@ body[dir="ltr"] .slider-arrow-next {
 }
 
 .campaign-poster-desc {
-  font-size: 13px;
-  color: var(--color-text-muted);
+  font-family: var(--font-arabic);
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #1e293b;
   margin-bottom: 16px;
-  line-height: 1.6;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .campaign-poster-footer {
@@ -2688,6 +2697,18 @@ body[dir="ltr"] .slider-arrow-next {
 .process-title,
 .process-desc {
   text-align: center !important;
+}
+
+.campaign-poster-desc,
+.service-desc,
+.process-desc {
+  font-family: var(--font-arabic) !important;
+  font-size: 14.5px !important;
+  font-weight: 500 !important;
+  color: #1e293b !important;
+  line-height: 1.85 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Bullet points (النقط) anchored to the right in Arabic */
