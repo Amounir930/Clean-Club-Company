@@ -6,6 +6,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
   initLanguageToggle();
   initMobileMenu();
   initLiveinSlider();
@@ -31,12 +32,14 @@ const translations = {
     brand_subtitle: "للتنظيفات والضيافة والخدمات",
     drawer_brand_title: "كلاب كلين للخدمات",
     lang_btn_text: "English",
+    theme_btn: "الوضع الليلي",
+    theme_light_btn: "الوضع النهاري",
 
     // Navigation
     nav_home: "الرئيسية",
-    nav_livein: "عقود المبيت والشهري",
+    nav_livein: "عقود المبيت",
     nav_services: "خدماتنا",
-    nav_whyus: "لماذا نحن؟",
+    nav_whyus: "لماذا نحن",
     nav_staff: "كادر العاملات",
     nav_gallery: "معرض العمليات",
     nav_process: "آلية الحجز",
@@ -302,12 +305,14 @@ const translations = {
     brand_subtitle: "Hospitality & Services",
     drawer_brand_title: "Clean Club Services",
     lang_btn_text: "العربية",
+    theme_btn: "Dark Mode",
+    theme_light_btn: "Light Mode",
 
     // Navigation
     nav_home: "Home",
-    nav_livein: "Live-In & Monthly",
+    nav_livein: "Live-In Contracts",
     nav_services: "Our Services",
-    nav_whyus: "Why Clean Club",
+    nav_whyus: "Why Us",
     nav_staff: "Staff Directory",
     nav_gallery: "Operations Gallery",
     nav_process: "Booking Process",
@@ -565,6 +570,64 @@ const translations = {
 /**
  * Initialize Bilingual Language Toggle (AR / EN)
  */
+/**
+ * Dark / Light Theme Controller
+ */
+function initThemeToggle() {
+  const themeToggleBtn = document.getElementById('themeToggleBtn');
+  const drawerThemeToggleBtn = document.getElementById('drawerThemeToggleBtn');
+  const themeLabel = document.getElementById('themeLabel');
+  const drawerThemeLabel = document.getElementById('drawerThemeLabel');
+
+  let currentTheme = localStorage.getItem('cleanclub_theme') || 'light';
+
+  function updateThemeUI(theme) {
+    const currentLang = localStorage.getItem('cleanclub_lang') || 'ar';
+    const trans = translations[currentLang] || translations.ar;
+    const isDark = theme === 'dark';
+    const labelText = isDark ? trans.theme_light_btn : trans.theme_btn;
+
+    if (themeLabel) themeLabel.textContent = labelText;
+    if (drawerThemeLabel) drawerThemeLabel.textContent = labelText;
+
+    if (themeToggleBtn) {
+      themeToggleBtn.setAttribute('title', labelText);
+      themeToggleBtn.setAttribute('aria-label', labelText);
+    }
+    if (drawerThemeToggleBtn) {
+      drawerThemeToggleBtn.setAttribute('title', labelText);
+      drawerThemeToggleBtn.setAttribute('aria-label', labelText);
+    }
+  }
+
+  function applyTheme(theme) {
+    currentTheme = theme;
+    localStorage.setItem('cleanclub_theme', theme);
+    document.documentElement.setAttribute('data-theme', theme);
+    updateThemeUI(theme);
+  }
+
+  function toggleTheme() {
+    const nextTheme = (currentTheme === 'dark') ? 'light' : 'dark';
+    applyTheme(nextTheme);
+  }
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', toggleTheme);
+  }
+  if (drawerThemeToggleBtn) {
+    drawerThemeToggleBtn.addEventListener('click', () => {
+      toggleTheme();
+    });
+  }
+
+  window.refreshThemeLabels = () => {
+    updateThemeUI(currentTheme);
+  };
+
+  applyTheme(currentTheme);
+}
+
 function initLanguageToggle() {
   const langToggleBtn = document.getElementById('langToggleBtn');
   const drawerLangToggleBtn = document.getElementById('drawerLangToggleBtn');
@@ -599,6 +662,9 @@ function initLanguageToggle() {
 
     // Update toggle button text
     updateButtonLabels(lang);
+    if (window.refreshThemeLabels) {
+      window.refreshThemeLabels();
+    }
 
     // Update all elements with data-i18n
     const transObj = translations[lang];
@@ -759,13 +825,33 @@ function initSmoothScroll() {
  */
 function initStickyHeader() {
   const header = document.querySelector('.main-header');
-  if (!header) return;
+  const navLinks = document.querySelectorAll('.desktop-nav .nav-link');
+  const sectionIds = ['home', 'live-in-offer', 'services', 'why-us', 'staff-directory', 'gallery', 'process', 'contact'];
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 30) {
-      header.classList.add('scrolled');
+      if (header) header.classList.add('scrolled');
     } else {
-      header.classList.remove('scrolled');
+      if (header) header.classList.remove('scrolled');
+    }
+
+    const scrollPos = window.scrollY + 140;
+    let currentId = '';
+    for (let i = sectionIds.length - 1; i >= 0; i--) {
+      const el = document.getElementById(sectionIds[i]);
+      if (el && el.offsetTop <= scrollPos) {
+        currentId = sectionIds[i];
+        break;
+      }
+    }
+    if (currentId) {
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === '#' + currentId) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
     }
   }, { passive: true });
 }

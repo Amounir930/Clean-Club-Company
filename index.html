@@ -37,6 +37,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- Theme Anti-Flash Script -->
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('cleanclub_theme');
+        if (theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
   <!-- Stylesheet -->
   <link rel="stylesheet" href="index.css">
 
@@ -153,9 +166,9 @@
       <!-- Desktop Navigation Links -->
       <nav class="desktop-nav" aria-label="القائمة الرئيسية">
         <a href="#home" class="nav-link active" data-i18n="nav_home">الرئيسية</a>
-        <a href="#live-in-offer" class="nav-link" data-i18n="nav_livein">عقود المبيت والشهري</a>
+        <a href="#live-in-offer" class="nav-link" data-i18n="nav_livein">عقود المبيت</a>
         <a href="#services" class="nav-link" data-i18n="nav_services">خدماتنا</a>
-        <a href="#why-us" class="nav-link" data-i18n="nav_whyus">لماذا نحن؟</a>
+        <a href="#why-us" class="nav-link" data-i18n="nav_whyus">لماذا نحن</a>
         <a href="#staff-directory" class="nav-link" data-i18n="nav_staff">كادر العاملات</a>
         <a href="#gallery" class="nav-link" data-i18n="nav_gallery">معرض العمليات</a>
         <a href="#process" class="nav-link" data-i18n="nav_process">آلية الحجز</a>
@@ -164,6 +177,11 @@
 
       <!-- Action Buttons -->
       <div class="header-action-group">
+        <button class="btn btn-theme-toggle" id="themeToggleBtn" aria-label="الوضع الليلي" title="الوضع الليلي">
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <span id="themeLabel" data-i18n="theme_btn">الوضع الليلي</span>
+        </button>
         <button class="btn btn-lang-toggle" id="langToggleBtn" aria-label="تغيير اللغة إلى الإنجليزية">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
           <span id="langLabel">English</span>
@@ -193,17 +211,22 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
       </div>
-      <div class="drawer-lang-wrap" style="padding: 12px 16px; border-bottom: 1px solid var(--color-border);">
-        <button class="btn btn-lang-toggle" id="drawerLangToggleBtn" style="width:100%; justify-content:center;">
+      <div class="drawer-lang-wrap">
+        <button class="btn btn-lang-toggle" id="drawerLangToggleBtn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
           <span id="drawerLangLabel">English</span>
+        </button>
+        <button class="btn btn-theme-toggle" id="drawerThemeToggleBtn" aria-label="الوضع الليلي">
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <span id="drawerThemeLabel" data-i18n="theme_btn">الوضع الليلي</span>
         </button>
       </div>
       <ul class="drawer-nav-list">
         <li><a href="#home" class="drawer-link" data-i18n="nav_home">الرئيسية</a></li>
-        <li><a href="#live-in-offer" class="drawer-link" data-i18n="nav_livein">عقود المبيت والشهري</a></li>
+        <li><a href="#live-in-offer" class="drawer-link" data-i18n="nav_livein">عقود المبيت</a></li>
         <li><a href="#services" class="drawer-link" data-i18n="nav_services">خدماتنا</a></li>
-        <li><a href="#why-us" class="drawer-link" data-i18n="nav_whyus">لماذا نحن؟</a></li>
+        <li><a href="#why-us" class="drawer-link" data-i18n="nav_whyus">لماذا نحن</a></li>
         <li><a href="#staff-directory" class="drawer-link" data-i18n="nav_staff">كادر العاملات والمرشحات</a></li>
         <li><a href="#gallery" class="drawer-link" data-i18n="nav_gallery">معرض العمليات</a></li>
         <li><a href="#process" class="drawer-link" data-i18n="nav_process">آلية الحجز</a></li>
