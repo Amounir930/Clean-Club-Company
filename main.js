@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const translations = {
   ar: {
     // Page Title & Meta
-    page_title: "cleanclubqatar.online - شركة كلاب كلين للتنظيفات والضيافة والخدمات - خبرة، ثقة، وضمان - هاتف: 33498554",
+    page_title: "شركة كلاب كلين للتنظيفات والضيافة والخدمات - هاتف: 33498554",
 
     // Top Bar
     top_location: "الدوحة، دولة قطر",
@@ -287,7 +287,7 @@ const translations = {
 
   en: {
     // Page Title & Meta
-    page_title: "cleanclubqatar.online - Clean Club Hospitality & Cleaning Services - Live-In Maids & Monthly Contracts - Tel: +974 33498554",
+    page_title: "Clean Club Hospitality & Cleaning Services - Tel: 33498554",
 
     // Top Bar
     top_location: "Doha, State of Qatar",
