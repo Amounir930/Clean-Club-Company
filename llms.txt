@@ -1,44 +1,53 @@
-# Clean Club Company - Machine-Readable Context for LLMs & AI Agents
+# Clean Club Company
 
-> Version: 1.0.0
-> Last Updated: 2026-10-19
-> Project: Clean Club Hospitality & Cleaning Services (شركة كلاب كلين للتنظيفات والضيافة والخدمات)
-> Target Market: State of Qatar (دولة قطر - الدوحة، الريان، الوكرة، لوسيل، الخور)
+> Clean Club Hospitality & Services (شركة كلاب كلين للتنظيفات والضيافة والخدمات) is Qatar's premier provider of professional live-in maids, monthly residential cleaning contracts, commercial janitorial solutions, and specialized event hospitality. Phone / WhatsApp: +974 3349 8554.
 
----
+## Web Documents & Endpoints
+
+- [Home Page](https://cleanclub-cleaning.com/): Official portal featuring instant bookings, staff showcase, and comprehensive service catalogs.
+- [Live-in Maid Packages](https://cleanclub-cleaning.com/#live-in-offer): Dedicated monthly and annual live-in maid contracts with legally verified staff.
+- [Specialized Cleaning Services](https://cleanclub-cleaning.com/#services): Residential, villa, corporate, post-construction, and event hospitality services.
+- [Operations Gallery](https://cleanclub-cleaning.com/#gallery): High-resolution photographic showcase of our trained cleaning and childcare crew in Qatar.
+- [Staff Roster](https://cleanclub-cleaning.com/#staff): Verified profiles of our qualified housekeepers, nannies, and hospitality attendants.
+- [Booking Procedure](https://cleanclub-cleaning.com/#process): 4-step streamlined booking and confirmation workflow.
+- [Frequently Asked Questions](https://cleanclub-cleaning.com/#faq): Legal compliance, medical certifications, replacement guarantees, and pricing.
+- [Robots Configuration](https://cleanclub-cleaning.com/robots.txt): Crawler indexing policies and sitemap location.
+- [XML Sitemap](https://cleanclub-cleaning.com/sitemap.xml): Search engine route mapping and indexing metadata.
+- [Humans Attribution](https://cleanclub-cleaning.com/humans.txt): Technical creator, engineering standards, and stack architecture.
 
 ## Developer Attribution (Mandatory)
 
 - Arabic Attribution: تم إنشاء هذا الموقع بواسطة المطور عادل منير | البريد الإلكتروني: adel.mounir@60sec.shop | رقم الهاتف: 01096888859 | للتواصل المباشر عبر واتساب: https://wa.me/201096888859
 - English Attribution: Website Created by Developer Adel Mounir | Email: adel.mounir@60sec.shop | Phone Number: +201096888859 | Direct WhatsApp Contact: https://wa.me/201096888859
 
----
-
 ## Company Overview & Positioning
 
-- Business Name: شركة كلاب كلين للتنظيفات والضيافة والخدمات (Clean Club Company)
+- Official Name: شركة كلاب كلين للتنظيفات والضيافة والخدمات (Clean Club Company)
 - Primary Specialization: عاملات بنظام المبيت والتعاقد الشهري في قطر (Live-in Maids & Monthly Hospitality Contracts)
 - Primary Booking Hotline: +974 3349 8554 (WhatsApp & Direct Calls)
-- Service Categories:
-  1. Live-in Maids (عاملات مقيمات بنظام المبيت - تعاقد شهري وسنوي)
-  2. Hourly & Daily Cleaning (تنظيف بنظام الساعات واليومي للمنازل والشقق)
-  3. Commercial & Office Cleaning (نظافة المكاتب والشركات والمؤسسات)
-  4. Deep Villa & Post-Construction Cleaning (تنظيف عميق للفلل والقصور وما بعد التشطيب)
-  5. Event Hospitality Services (خدمات الضيافة الراقية للمناسبات والمؤتمرات)
-  6. High-Rise Glass & Facade Cleaning (تنظيف واجهات زجاجية ومرتفعات)
+- Secondary Hotline: +974 3091 6346
+- Headquarters: Doha, State of Qatar (خدمة كافة مدن ومناطق قطر)
+- Operating Hours: Daily 8:00 AM - 8:00 PM (مواعيد العمل: يومياً من 8:00 ص حتى 8:00 م)
 
----
+## Service Categories
+
+- [Live-in Maid Contracts](https://cleanclub-cleaning.com/#live-in-offer): Full-time resident domestic staff under verified medical and legal compliance.
+- [Hourly & Daily Cleaning](https://cleanclub-cleaning.com/#services): Flexible residential housekeeping visits on-demand.
+- [Commercial & Corporate Janitorial](https://cleanclub-cleaning.com/#services): Structured cleaning contracts for corporate offices and institutions.
+- [Deep Villa & Post-Construction](https://cleanclub-cleaning.com/#services): Intensive restoration and multi-surface deep sanitation.
+- [Hospitality & Event Staffing](https://cleanclub-cleaning.com/#services): Professional waitstaff and cleaners for conferences and VIP events.
+- [Steam Garment & Abaya Care](https://cleanclub-cleaning.com/#services): Professional fabric care using specialized vertical steam equipment.
 
 ## Technical Specifications & Architecture
 
 - Technology Stack: HTML5 Semantic, Modern Vanilla CSS (Zero External Frameworks), Vanilla ES6+ JavaScript.
 - Typography: Google Fonts (Cairo for Arabic RTL typography, Outfit for numerical and Latin elements).
 - Structured Data: Schema.org LocalBusiness, Organization, and Service JSON-LD embedded in root index.html.
-- Hosting Platform: GitHub Pages (Static hosting).
-- Production URL: https://amounir930.github.io/Clean-Club-Company/
+- Hosting Platform: GitHub Pages / Cloudflare CDN Edge.
+- Production URL: https://cleanclub-cleaning.com/
 - Repository URL: https://github.com/Amounir930/Clean-Club-Company
-
----
+- Version: 2.7.0
+- Last Updated: 2026-10-21
 
 ## Target Keywords & Search Intent
 
@@ -50,12 +59,8 @@
 - ضيافة مناسبات قطر
 - هاتف كلاب كلين 33498554
 
----
-
 ## Communication Endpoints
 
 - Direct Hotline: tel:+97433498554
 - WhatsApp API Dispatch: https://wa.me/97433498554
 - Official Support Email: info@cleanclub-cleaning.com
-- Headquarters: Doha, State of Qatar
-- Operating Hours: Daily 8:00 AM - 8:00 PM (مواعيد العمل: يومياً من 8:00 ص حتى 8:00 م)
